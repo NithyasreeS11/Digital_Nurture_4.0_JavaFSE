@@ -1,0 +1,11 @@
+CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus (
+  p_department IN VARCHAR2,
+  p_bonus_pct  IN NUMBER      -- Pass 10 for 10%, 5 for 5% etc.
+) IS
+BEGIN
+  UPDATE employees
+  SET salary = salary + (salary * p_bonus_pct / 100)
+  WHERE department = p_department;
+
+  COMMIT;
+END;
