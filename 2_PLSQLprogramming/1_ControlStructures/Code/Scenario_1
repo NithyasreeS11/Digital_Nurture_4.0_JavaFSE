@@ -1,0 +1,10 @@
+BEGIN
+  FOR customer_rec IN (SELECT customer_id, age FROM customers) LOOP
+    IF customer_rec.age > 60 THEN
+      UPDATE loans
+      SET interest_rate = interest_rate - 1
+      WHERE customer_id = customer_rec.customer_id;
+    END IF;
+  END LOOP;
+  COMMIT;
+END;
