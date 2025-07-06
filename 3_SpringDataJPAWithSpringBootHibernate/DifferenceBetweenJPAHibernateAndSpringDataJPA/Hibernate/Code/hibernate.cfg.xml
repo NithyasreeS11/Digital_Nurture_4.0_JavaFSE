@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+      "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+
+      <!-- JDBC connection settings -->
+      <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+      <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+      <property name="connection.username">username</property>
+      <property name="connection.password">password</property>
+
+      <!-- JDBC connection pool -->
+      <property name="connection.pool_size">5</property>
+
+      <!-- SQL dialect -->
+      <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+
+      <!-- Enable Hibernate's SQL log -->
+      <property name="show_sql">true</property>
+      <property name="format_sql">true</property>
+
+      <!-- Automatically create/drop tables -->
+      <property name="hbm2ddl.auto">update</property>
+
+      <!-- Mapped classes -->
+      <mapping class="Employee"/>
+
+   </session-factory>
+</hibernate-configuration>
