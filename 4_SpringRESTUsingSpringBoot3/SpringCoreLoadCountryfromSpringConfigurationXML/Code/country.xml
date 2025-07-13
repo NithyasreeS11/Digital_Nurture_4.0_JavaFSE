@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="country" class="com.cognizant.spring_learn.Country">
+        <property name="code" value="IN" />
+        <property name="name" value="India" />
+    </bean>
+</beans>
